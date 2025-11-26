@@ -1,0 +1,158 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Executive Green Palette - Lider Commerce */
+    --background: 0 0% 100%;
+    --foreground: 215 25% 15%;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 15%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 15%;
+    
+    /* Executive Green - Primary Brand */
+    --primary: 158 80% 33%;
+    --primary-foreground: 0 0% 100%;
+    
+    /* Light Premium Green */
+    --secondary: 158 71% 36%;
+    --secondary-foreground: 0 0% 100%;
+    
+    /* Soft Green Background */
+    --muted: 158 43% 92%;
+    --muted-foreground: 215 16% 47%;
+    
+    /* Green Accent */
+    --accent: 158 71% 36%;
+    --accent-foreground: 0 0% 100%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    /* Gray System */
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 158 80% 33%;
+    
+    /* Custom Tokens */
+    --gray-deep: 215 25% 15%;
+    --gray-medium: 215 14% 50%;
+    --gray-light: 220 13% 86%;
+    --white-off: 210 20% 98%;
+    --green-soft: 158 43% 92%;
+    --blue-corporate: 224 64% 33%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(158 80% 33%), hsl(158 71% 36%));
+    --gradient-subtle: linear-gradient(180deg, hsl(210 20% 98%), hsl(158 43% 92%));
+    --gradient-accent: linear-gradient(135deg, hsl(158 71% 36%), hsl(224 64% 33%));
+    --gradient-premium: linear-gradient(135deg, hsl(158 80% 33%), hsl(215 25% 15%));
+    
+    /* Shadows */
+    --shadow-elegant: 0 10px 30px -10px hsl(158 80% 33% / 0.3);
+    --shadow-glow: 0 0 40px hsl(158 71% 36% / 0.4);
+    --shadow-card: 0 4px 6px -1px hsl(215 25% 15% / 0.1);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    --radius: 0.75rem;
+    
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 215 25% 15%;
+    --foreground: 0 0% 98%;
+    
+    --card: 215 20% 18%;
+    --card-foreground: 0 0% 98%;
+    
+    --popover: 215 20% 18%;
+    --popover-foreground: 0 0% 98%;
+    
+    --primary: 158 71% 36%;
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 215 20% 22%;
+    --secondary-foreground: 0 0% 98%;
+    
+    --muted: 215 20% 22%;
+    --muted-foreground: 215 14% 65%;
+    
+    --accent: 158 71% 36%;
+    --accent-foreground: 0 0% 100%;
+    
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 98%;
+    
+    --border: 215 20% 22%;
+    --input: 215 20% 22%;
+    --ring: 158 71% 36%;
+    
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Sora', 'Inter', sans-serif;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .hover-scale {
+    @apply transition-transform duration-300 hover:scale-105;
+  }
+  
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+  
+  .gradient-subtle {
+    background: var(--gradient-subtle);
+  }
+  
+  .shadow-elegant {
+    box-shadow: var(--shadow-elegant);
+  }
+  
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+}
